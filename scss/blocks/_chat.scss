@@ -1,0 +1,70 @@
+.chat{
+    padding: 10px;
+    max-width: 400px;
+    min-height: 500px;
+    background-image: url(./../../images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    &__content{
+        padding: 10px;
+        border-radius: 10px;
+        // min-width: 120px;
+        padding: 15px;
+        margin-bottom: 15px;
+        display: inline-block;
+        position: relative;
+    }
+
+    &__content:nth-child(even){
+        background-color: white;
+        margin-right: auto;
+    }
+
+    
+    &__content:nth-child(odd){
+        margin-left: auto;
+        background-color: lightgreen;
+    }
+    
+    &__text{
+        margin: 0;
+        padding: 0;
+        min-width: 120px;
+    }
+
+    &__content:nth-child(even)::before{
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid white;
+        border-top: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        position: absolute;
+        right: 100%;
+        bottom: 0;
+        transform: translateX(50%);
+    }
+
+    &__content:nth-child(odd)::after{
+        content: "";
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid lightgreen;
+        border-top: 10px solid transparent;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        position: absolute;
+        left: 100%;
+        bottom: 0;
+        transform: translateX(-50%);
+    }
+}

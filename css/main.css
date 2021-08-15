@@ -1,0 +1,116 @@
+.chat {
+  padding: 10px;
+  max-width: 400px;
+  min-height: 500px;
+  background-image: url(./../../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chat__content {
+  padding: 10px;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
+  position: relative;
+}
+
+.chat__content:nth-child(even) {
+  background-color: white;
+  margin-right: auto;
+}
+
+.chat__content:nth-child(odd) {
+  margin-left: auto;
+  background-color: lightgreen;
+}
+
+.chat__text {
+  margin: 0;
+  padding: 0;
+  min-width: 120px;
+}
+
+.chat__content:nth-child(even)::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid white;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  right: 100%;
+  bottom: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.chat__content:nth-child(odd)::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid lightgreen;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.container {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* barlow-regular - latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/barlow-v5-latin-regular.woff2") format("woff2"), url("../fonts/barlow-v5-latin-regular.woff") format("woff");
+}
+
+/* barlow-700 - latin */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/barlow-v5-latin-700.woff2") format("woff2"), url("../fonts/barlow-v5-latin-700.woff") format("woff");
+}
+
+/* fraunces-900 - latin */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/fraunces-v10-latin-900.woff2") format("woff2"), url("../fonts/fraunces-v10-latin-900.woff") format("woff");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", "Arial", sans-serif;
+}
+/*# sourceMappingURL=main.css.map */
